@@ -24,14 +24,15 @@ namespace Superheros.Controllers
         }
 
         // GET: SuperheroController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();  
-        }
+        //public ActionResult Details(int id)
+        //{
+        //    return View();  
+        //}
 
         // GET: SuperheroController/Create
         public ActionResult Create()
         {
+            
             return View();
         }
 
