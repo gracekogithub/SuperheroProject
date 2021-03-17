@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Superheros.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace Superheros.Controllers
 {
     public class SuperheroController : Controller
     {
+        private ApplicationException _context;
+        public SuperheroController(ApplicationException context)
+        {
+            _context = context;
+        }
         // GET: SuperheroController
         public ActionResult Index()
         {
@@ -18,11 +24,11 @@ namespace Superheros.Controllers
         // GET: SuperheroController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View();  
         }
 
         // GET: SuperheroController/Create
-        public ActionResult Create()
+        public ActionResult Create(Superhero superheros)
         {
             return View();
         }
