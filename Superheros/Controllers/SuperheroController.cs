@@ -53,39 +53,25 @@ namespace Superheros.Controllers
         }
 
         // GET: SuperheroController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: SuperheroController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
 
         // GET: SuperheroController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var obj = _context.Superheros.Find(id);
+            return View(obj);
         }
 
         // POST: SuperheroController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, Superhero removeOne)
         {
             try
             {
+               
+                _context.Superheros.Remove(removeOne);
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
