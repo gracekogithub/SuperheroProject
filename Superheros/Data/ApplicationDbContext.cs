@@ -14,6 +14,6 @@ namespace Superheros.Data
             : base(options)
         {
         }
-       
+        
     }
 }
