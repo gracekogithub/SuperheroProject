@@ -4,10 +4,44 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome Superhero Fans</h1>
-   <!-- <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> -->
-    <div class="container">
-        <img src="https://homefinder.com.my/wp-content/uploads/2016/03/marvel_superheroes.jpg" alt="superheros" style="width:100%;">
-        
-        <div class="centered"><h1>Who is your favorite Superhero?</h1></div>
+    <!-- <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> -->
+   
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="https://homefinder.com.my/wp-content/uploads/2016/03/marvel_superheroes.jpg" alt="New York" width="1000" height="550">
+            </div>
+
+            <div class="item">
+                <img src="https://www.denofgeek.com/wp-content/uploads/2020/09/supergirl-cancelled.jpg?resize=768%2C432" alt="supergirl" width="1000" height="550">
+                <div class="carousel-caption">
+                    <p>Fast and strong..missed me?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-</div>
+
+    <div class="container text-center">
+        <h3>THE SUPERHEROS</h3>
+        <p><em>We love them!</em></p>
+        <br>
+    </div>
+
+
