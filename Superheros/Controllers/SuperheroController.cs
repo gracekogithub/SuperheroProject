@@ -53,7 +53,28 @@ namespace Superheros.Controllers
         }
 
         // GET: SuperheroController/Edit/5
-        
+        public ActionResult Edit(int id)
+        {
+            var editting = _context.Superheros.Find(id);
+            return View(editting);
+        }
+
+        // POST: SuperheroController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, Superhero edit)
+        {
+            try
+            {
+                _context.Superheros.Update(edit);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
         // GET: SuperheroController/Delete/5
         public ActionResult Delete(int id)
