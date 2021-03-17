@@ -14,6 +14,7 @@ namespace Superheros.Models
         public string Ego { get; set; }
         public string PrimaryAbility { get; set; }
         public string SecondaryAbility { get; set; }
+        public string Catchphrase { get; set; }
 
     }
-}
+} 
